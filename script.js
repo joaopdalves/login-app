@@ -8,10 +8,10 @@ form.addEventListener("submit", (e) => {
 
   if (usuario.value === "" || senha.value === "") {
     mensagem.textContent = "Preencha todos os campos!";
-  } else if (usuario.value === "adm" && senha.value === "123") {
+} else if (usuario.value === "adm" && senha.value === "123") {
     mensagem.style.color = "#03dac6";
     mensagem.textContent = "Login realizado com sucesso!";
-  } else {
-    mensagem.textContent = "Usuário ou senha incorretos.";
-  }
-});
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+    }, 1000);
+}
